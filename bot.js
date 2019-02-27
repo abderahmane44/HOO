@@ -314,8 +314,7 @@ client.on("reachLimit", (limit)=> {
 
 
 
-const gamestats = [`!help1`,`PANDA SERVER bot`,`by 1_Ali_`,`PANDA SERVER
-`]
+const gamestats = [`hello`,`for SERVER`,`by | NoHaxJustAbdou `,`mens`]
 var index = 0
 var timer = 10 // الوقت بالثواني لتغير الستريمنق
 client.on("ready", ()=> {
