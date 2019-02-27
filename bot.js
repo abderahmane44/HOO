@@ -314,7 +314,7 @@ client.on("reachLimit", (limit)=> {
 
 
 
-const gamestats = [`hello`,`for SERVER`,`by | NoHaxJustAbdou `,`mens`]
+const gamestats = [`تعلمت ابرمج`,`تعلمت ابرمج`,`by | NoHaxJustAbdou `,`تعلمت ابرمج`]
 var index = 0
 var timer = 10 // الوقت بالثواني لتغير الستريمنق
 client.on("ready", ()=> {
