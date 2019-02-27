@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "-"; // ضع البريفكس الخاص بك هنا
+const prefix = "#"; // ضع البريفكس الخاص بك هنا
 
 
 
@@ -38,17 +38,17 @@ client.on('message', message => {
     let command = messageArray[0];
     
     
-    if (command === `${prefix}help1`) {
+    if (command === `${prefix}help`) {
       message.channel.send(`**تم الارسال في الخاص**`);
 			let embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
-                .addField('     **=-=-:: [ PANDA SERVER ] ::-=-=** ' ,'╔[❖═════════════════════❖]╗')
-				.addField(`**${prefix}bc1 | رسالة جماعية لجميع الاعضاء**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
-				.addField(`**${prefix}bc2 | رسالة جماعية للاونلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
-				.addField(`**${prefix}bc3 | رسالة جماعية للوفلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
+                .addField('     **=-=-:: [Mazza Shop] ::-=-=** ' ,'╔[❖═════════════════════❖]╗')
+				.addField(`**${prefix}bc | رسالة جماعية لجميع الاعضاء**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
+				.addField(`**${prefix}bc1 | رسالة جماعية للاونلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
+				.addField(`**${prefix}bc2 | رسالة جماعية للوفلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
 				.addField(`**${prefix}bcrole | رسالة جماعية لرتبة معينه**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
                 .addField('=-=- [ شكرا على استعمال البوت ] -=-= ' ,'╚[❖═════════════════════❖]╝')
-                .setFooter(`Va | NoHaxJustAbdou#6562`)
+                .setFooter(`by Va | NoHaxJustAbdou#6562`)
                 .setTimestamp()
 			
                 message.author.sendEmbed(embed)
@@ -58,7 +58,7 @@ client.on('message', message => {
 
  client.on("message", message => {//bc1
 
-            if (message.content.startsWith(prefix + "bc1")) {
+            if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -71,9 +71,9 @@ client.on('message', message => {
 });
 
 
-client.on("message", message => {//bc2
+client.on("message", message => {//bc1
 
-            if (message.content.startsWith(prefix + "bc2")) {
+            if (message.content.startsWith(prefix + "bc1")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -85,9 +85,9 @@ client.on("message", message => {//bc2
 };     
 });
 
-client.on("message", message => {//bc3
+client.on("message", message => {//bc2
 
-            if (message.content.startsWith(prefix + "bc3")) {
+            if (message.content.startsWith(prefix + "bc2")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
