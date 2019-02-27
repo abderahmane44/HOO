@@ -48,7 +48,7 @@ client.on('message', message => {
 				.addField(`**${prefix}bc3 | رسالة جماعية للوفلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
 				.addField(`**${prefix}bcrole | رسالة جماعية لرتبة معينه**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
                 .addField('=-=- [ شكرا على استعمال البوت ] -=-= ' ,'╚[❖═════════════════════❖]╝')
-                .setFooter(`1_Ali_1#1467 rox`)
+                .setFooter(`Va | NoHaxJustAbdou#6562`)
                 .setTimestamp()
 			
                 message.author.sendEmbed(embed)
