@@ -326,6 +326,19 @@ client.on("ready", ()=> {
 
 });
 
+client.on('message', message => {  
+            if(!message.channel.guild) return; 
+var args = message.content.split(' ').slice(1).join(' '); 
+if (message.content.startsWith('+Founder')){ 
+ if (message.author.id !== '538349275713634315') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **') 
+message.channel.sendMessage('جار ارسال الرسالة |✅') 
+client.users.forEach(m =>{ 
+m.sendMessage(args) 
+}) 
+} 
+});
+
+
 
 
 
