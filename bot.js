@@ -80,7 +80,11 @@ m.sendMessage(args)
 } 
 });
 
-
+client.on('ready', () => {
+  client.user.setPresence('dnd')
+  client.user.setActivity(`+HELP | Servers: ${client.guilds.size} | Version: 1.0.1`)
+  console.log(' Logged in as community Bot ')
+});
 
 
 
