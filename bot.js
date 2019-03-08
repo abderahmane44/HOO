@@ -55,7 +55,17 @@ client.on('message', message => {
 	}
 });
 
+client.on('message', message =>{
+if(message.content.startsWith(prefix + 'count')){
+message.channel.send(`
 
+ 
+${message.guild.memberCount} <== ** عدد الكل**
+${message.guild.members.filter(m =>!m.user.bot).size} <==  ** عدد الاعضاء**
+${message.guild.members.filter(m=>m.user.bot).size} <== ** عدد البوتات**
+`)
+}
+});
 
 client.on('message', message => {  
             if(!message.channel.guild) return; 
