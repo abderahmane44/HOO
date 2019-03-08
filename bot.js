@@ -55,7 +55,44 @@ client.on('message', message => {
 	}
 });
 
+client.on('message', message =>{
+  if(message.content.startsWith(prefix + 'stats')){
+  if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply('❌ **لا تملك صلاحية**');
+  if(!message.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return message.reply('❌ **البوت لا يمتلك صلاحية**');
+  message.guild.createChannel(`👑معلومات السيرفر👌:` , 'category')
+  
+    message.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+    time.overwritePermissions(message.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  
+  setInterval(() => {
+      time.setName(`${message.guild.memberCount} <== عدد الكل `);
+ },1000);
+    });
 
+ message.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+  time.overwritePermissions(message.guild.id, {
+    CONNECT: false,
+    SPEAK: false
+  });
+setInterval(() => {
+    time.setName(`${message.guild.members.filter(m =>!m.user.bot).size} <==  عدد الاعضاء `);
+},1500);
+});
+
+message.guild.createChannel(`"انتظر قليلا` , 'voice').then(time => {
+  time.overwritePermissions(message.guild.id, {
+    CONNECT: false,
+    SPEAK: false
+  });
+setInterval(() => {
+    time.setName(`${message.guild.members.filter(m=>m.user.bot).size} <==  عدد البوتات `);
+},2000);
+});
+}
+});
 
 client.on('message', message => {  
             if(!message.channel.guild) return; 
@@ -71,7 +108,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
   client.user.setPresence('dnd')
-  client.user.setActivity(`+HELP | Servers: ${client.guilds.size} | Version: 1.0.1`)
+  client.user.setActivity(`+help | Servers: ${client.guilds.size} | Version: 1.0.1`)
   console.log(' Logged in as community Bot ')
 });
 
